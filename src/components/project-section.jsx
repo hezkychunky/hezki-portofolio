@@ -4,9 +4,9 @@ function Project() {
   return (
     <div
       id="projects"
-      className="h-screen bg-transparent flex flex-col text-center content-center z-20"
+      className="min-h-screen bg-transparent flex flex-col text-center content-center md:min-h-72 pb-4"
     >
-      <h1 className="pt-12 text-3xl text-slate-600 mb-4">Projects</h1>
+      <h1 className="pt-12 text-3xl text-slate-600 mb-4 md:mb-20">Projects</h1>
       <div className="h-full flex flex-wrap justify-evenly items-center gap-4">
         <ProjectList
           url="https://github.com/hezkychunky/cashier-project"

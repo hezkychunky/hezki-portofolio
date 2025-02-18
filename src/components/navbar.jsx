@@ -39,7 +39,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-slate-700 lg:text-lg">
+            <a href="#contact" className="hover:text-slate-700 lg:text-lg">
               Contact
             </a>
           </li>
@@ -81,7 +81,7 @@ const Navbar = () => {
           Projects
         </a>
         <a
-          href="#"
+          href="#contact"
           className="hover:scale-125 lg:text-lg rounded-lg w-52 text-center"
         >
           Contact
