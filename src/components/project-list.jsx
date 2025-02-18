@@ -1,20 +1,26 @@
-import Architecture from '../components/images/architecture.jpg'
-import Kvd from '../components/images/kvd.jpg'
-import MyWeb from '../components/images/myweb.png'
-import TouchBar from '../components/images/touchbar_.jpg'
-import { motion } from 'framer-motion'
+import PropTypes from "prop-types";
+ProjectList.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
 
-function ProjectList () {
-   return (
-      <div id='slider' className="flex gap-5 h-full w-4/5 items-center">
-         <div className="whitespace-nowrap w-full h-full overflow-x-scroll scroll-smooth scrollbar-hide pt-2">
-            <span className='border-rad inline-block hover:scale-110 duration-500'><motion.img drag='x' dragConstraints={{left: 0, right:0,}} className='h-[300px] rounded-full' src={TouchBar} alt="" /></span>
-            <span className='border-rad inline-block hover:scale-110 duration-500'><motion.img drag='x' dragConstraints={{left: 0, right:0,}} className='h-[300px] rounded-full' src={Architecture} alt="" /></span>
-            <span className='border-rad inline-block hover:scale-110 duration-500'><motion.img drag='x' dragConstraints={{left: 0, right:0,}} className='h-[300px] rounded-full' src={Kvd} alt="" /></span>
-            <span className='border-rad inline-block hover:scale-110 duration-500'><motion.img drag='x' dragConstraints={{left: 0, right:0,}} className='h-[300px] rounded-full hue-rotate-180' src={MyWeb} alt="" /></span>
-         </div>
+function ProjectList({ image, title, description, url }) {
+  return (
+    <a href={url} target="_blank">
+      <div className="max-w-sm bg-gray-100 rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:brightness-90">
+        {/* Card Image */}
+        <img src={image} alt={title} className="w-full h-48 object-cover" />
+
+        {/* Card Content */}
+        <div className="p-4">
+          <h2 className="text-xl font-bold text-gray-800">{title}</h2>
+          <p className="text-gray-600 mt-2">{description}</p>
+        </div>
       </div>
-   )
+    </a>
+  );
 }
 
-export default ProjectList
+export default ProjectList;

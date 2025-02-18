@@ -1,21 +1,32 @@
 import Greetings from "./greetings";
 
-function Hero () {
-   return (
-      <div id="home" className="flex flex-col bg-transparent h-screen z-10">
-         <Greetings />
-         <div className="absolute top-2/4 left-20">
-            <ul className="flex flex-row mt-10 gap-32 text-lg">
-               <li className=" bg-gray-100 rounded-full px-4 hover:scale-110 duration-300">Full-stack Web Development</li>
-               <li className=" bg-gray-100 rounded-full px-4 hover:scale-110 duration-300">Typescript</li>
-            </ul>
-            <ul className="flex flex-row gap-32 ml-24 mt-14 text-lg items-center">
-               <li className=" bg-gray-100 rounded-3xl px-4 hover:scale-110 duration-300">React</li>
-               <li className=" bg-gray-100 rounded-3xl px-4 hover:scale-110 duration-300">Tailwind</li>
-            </ul>
-         </div>
-      </div>
-   )
+function Hero() {
+  return (
+    <div
+      id="home"
+      className="flex flex-wrap bg-transparent h-screen z-10 pt-24 md:pt-60"
+    >
+      <section className="w-full xl:w-1/2">
+        <Greetings />
+      </section>
+      <section
+        id="#about"
+        className="w-full xl:w-1/2 flex flex-col justify-center md:p-8"
+      >
+        <h1 className="text-3xl text-slate-600 text-center pb-4">About Me</h1>
+        <p>
+          <span className="text-teal-500 font-semibold bg-gray-100 py-1 rounded-sm">
+            “Exposing features and simplifying complexities”
+          </span>{" "}
+          have always been two aspects I am passionate about, guiding my work as
+          a web developer. <br /> Now, with React, Next.js, and Express.js, I am
+          able to bring them to life through clean & efficient code.
+          Additionally, by applying cognitive empathy, I strive to make
+          applications more intuitive with thoughtful design and layout.
+        </p>
+      </section>
+    </div>
+  );
 }
 
 export default Hero;
